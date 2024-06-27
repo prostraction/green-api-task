@@ -14,20 +14,23 @@
 <body>
     <main>
         <div class="container">
-            <div><input type="text" id="idInstance" placeholder="idInstance"/></div>
-            <div><input type="text" id="ApiTokenInstance" placeholder="ApiTokenInstance"/></div>
-            <div><button type="button" data-type="getSettings">getSettings</button></div>
-            <div><button type="button" data-type="apiStateInstance">apiStateInstance</button></div>
-            <div><input type="tel" id="phoneMessage" placeholder="77771234567"/></div>
-            <div><input type="text" id="message" placeholder="Hello World!"/></div>
-            <div><button type="button" data-type="sendMessage">sendMessage</button></div>
-            <div><input type="tel" id="phoneFile" placeholder="77771234567"/></div>
-            <div><input type="text" id="urlFile" placeholder="https://my.site.com/img/horse.png"/></div>
-            <div><button type="button" data-type="sendMessage">sendFileByUrl</button></div>
+            <div><input type="text" id="idInstanceInput" placeholder="idInstance"/></div>
+            <div><input type="password" id="apiTokenInstanceInput" placeholder="ApiTokenInstance"/></div>
+
+            <div><button type="button" id="getSettingsButton" data-type="getSettings">getSettings</button></div>
+            <div><button type="button" id="apiStateInstanceButton" data-type="apiStateInstance">apiStateInstance</button></div>
+
+            <div><input type="tel" id="phoneMessageInput" placeholder="77771234567"/></div>
+            <div><input type="text" id="messageInput" placeholder="Hello World!"/></div>
+            <div><button type="button" id="sendMessageButton" data-type="sendMessage">sendMessage</button></div>
+
+            <div><input type="tel" id="phoneFileInput" placeholder="77771234567"/></div>
+            <div><input type="text" id="messageFileInput" placeholder="https://my.site.com/img/horse.png"/></div>
+            <div><button type="button" id="sendFileButton">sendFileByUrl</button></div>
         </div>
         <div class="container">
             <div><h2>Ответ: </h2></div>
-            <textarea id="answer" placeholder=""></textarea>
+            <textarea id="answer" placeholder="" readonly></textarea>
         </div>
     </main>
 

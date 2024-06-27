@@ -41,7 +41,7 @@ h2 {
     margin: 0 auto;
 }
 
-#answer {
+#answerText {
     display: flex;
     resize: none;
     flex-grow: 1;

@@ -15,13 +15,14 @@ const makeRequest = (uri, request) => {
     fetch(uri, request)
     .then(res => {return (res.ok) ? res.json() : Promise.reject(res);})
     .then(data => {
-        let result = ``;
+        let result = `{\n`;
         for (key in data) {
             if (data.hasOwnProperty(key)) {
-                let value = (data[key].length === 0) ? `""` : data[key];
-                result += `${key}: ${value}\n`;
+                const value = data[key];
+                result += `    "${key}": "${value}"\n`;
             }
         }
+        result += "}"
         answerText.value = result;
     })
     .catch(res => {

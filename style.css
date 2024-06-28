@@ -39,10 +39,31 @@ input, textarea {
 h2 {
     padding: 0;
     margin: 0 auto;
+    font-weight: lighter;
 }
 
 #answerText {
     display: flex;
-    resize: none;
     flex-grow: 1;
+}
+
+textarea {
+    resize: none;
+}
+
+.small-block {
+    margin-top: 30px;
+}
+
+.small-block > * {
+    margin-top: 5px;
+}
+
+.small-block button {
+    margin-top: 10px;
+}
+
+#getSettingsButton {
+    margin-top: 30px;
+    margin-bottom: 15px;
 }

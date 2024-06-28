@@ -1,11 +1,7 @@
+/* Helpers */
 const getApiUrl = (idInstance) => {
     const id = (idInstance.length > 3) ? idInstance.slice(0, 4) : idInstance;
     return `https://${id}.api.green-api.com`;
-};
-
-const getMediaUrl = (idInstance) => {
-    const id = (idInstance.length > 3) ? idInstance.slice(0, 4) : idInstance;
-    return `https://${id}.media.green-api.com`;
 };
 
 const idInstanceInput = document.querySelector('#idInstanceInput');
@@ -47,6 +43,7 @@ const inputDataIsOk = (idInstance, apiTokenInstance) => {
     }
 }
 
+/* getSettings */
 const getSettingsButton = document.querySelector('#getSettingsButton');
 getSettingsButton.addEventListener("click", function() {
     const [idInstance, apiTokenInstance] = getIdAndApi();
@@ -56,6 +53,7 @@ getSettingsButton.addEventListener("click", function() {
     }
 });
 
+/* apiStateInstance */
 const apiStateInstanceButton = document.querySelector('#apiStateInstanceButton');
 apiStateInstanceButton.addEventListener("click", function() {
     const [idInstance, apiTokenInstance] = getIdAndApi();
@@ -65,6 +63,7 @@ apiStateInstanceButton.addEventListener("click", function() {
     }
 });
 
+/*sendMessage */
 const phoneMessageInput = document.querySelector('#phoneMessageInput');
 const messageInput = document.querySelector('#messageInput')
 const sendMessageButton = document.querySelector('#sendMessageButton');
@@ -90,6 +89,7 @@ sendMessageButton.addEventListener("click", function() {
     }
 });
 
+/* sendFileByUrl */
 const phoneFileInput = document.querySelector('#phoneFileInput');
 const messageFileInput = document.querySelector('#messageFileInput')
 const sendFileButton = document.querySelector('#sendFileButton');
